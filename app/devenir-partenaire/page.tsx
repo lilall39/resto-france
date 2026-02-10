@@ -22,7 +22,9 @@ export const metadata: Metadata = {
 export default function DevenirPartenairePage() {
   return (
     <>
-      <Hero data={partenaireHero} compact />
+      <div className="max-h-[35vh] md:max-h-[42vh] overflow-hidden">
+        <Hero data={partenaireHero} compact />
+      </div>
       <Section data={partenaireIntro} />
       <section className="section-padding bg-muted" aria-labelledby="benefits-title">
         <div className="container mx-auto px-4">
@@ -36,7 +38,9 @@ export default function DevenirPartenairePage() {
           </Grid>
         </div>
       </section>
-      <CTA data={partenaireCta} variant="secondary" />
+      <div className="[&_a]:!py-4 [&_a]:!text-lg [&_a]:!min-h-[52px] [&_a]:!font-semibold">
+        <CTA data={partenaireCta} variant="secondary" />
+      </div>
     </>
   );
 }

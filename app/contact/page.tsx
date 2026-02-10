@@ -14,8 +14,8 @@ export default function ContactPage() {
   return (
     <>
       <Hero data={contactHero} compact />
-      <section className="section-padding bg-background" aria-labelledby="contact-title">
-        <div className="container mx-auto px-4">
+      <section className="pt-6 md:pt-8 pb-16 md:pb-24 bg-background [&_button]:!py-4 [&_button]:!text-lg [&_button]:!min-h-[48px] [&_button]:!font-semibold" aria-labelledby="contact-title">
+        <div className="container mx-auto px-4 max-w-6xl">
           <ContactForm />
         </div>
       </section>

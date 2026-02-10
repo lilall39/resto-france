@@ -4,12 +4,10 @@ export const siteName = 'Resto France';
 
 export const navLinks: NavLink[] = [
   { label: 'Accueil', href: '/' },
-  { label: 'Notre univers', href: '/notre-univers' },
   { label: 'Solutions', href: '/solutions' },
-  { label: 'Sur-mesure', href: '/sur-mesure' },
   { label: 'Réalisations', href: '/realisations' },
+  { label: 'Sur-mesure', href: '/sur-mesure' },
   { label: 'Matériaux', href: '/materiaux' },
-  { label: 'Partenaire', href: '/devenir-partenaire' },
   { label: 'Contact', href: '/contact' },
 ];
 

@@ -3,7 +3,9 @@ import Hero from '@/components/Hero';
 import Section from '@/components/Section';
 import Card from '@/components/Card';
 import Grid from '@/components/Grid';
+import CTA from '@/components/CTA';
 import { universHero, universStory, universValues, universMeta } from '@/data/univers';
+import { solutionsCta } from '@/data/solutions';
 
 export const metadata: Metadata = {
   title: universMeta.title,
@@ -15,11 +17,15 @@ export const metadata: Metadata = {
 export default function NotreUniversPage() {
   return (
     <>
-      <Hero data={universHero} compact />
-      <Section data={universStory} />
-      <section className="section-padding bg-muted" aria-labelledby="values-title">
+      <div className="max-h-[35vh] md:max-h-[42vh] overflow-hidden">
+        <Hero data={universHero} compact />
+      </div>
+      <div className="pb-6 md:pb-8">
+        <Section data={universStory} />
+      </div>
+      <section className="section-padding bg-muted -mt-2 md:-mt-4 pt-8 md:pt-10 pb-10 md:pb-16" aria-labelledby="values-title">
         <div className="container mx-auto px-4">
-          <h2 id="values-title" className="font-display text-2xl md:text-3xl text-text text-center mb-10">
+          <h2 id="values-title" className="font-display text-3xl md:text-4xl text-text text-center mb-10">
             Nos valeurs
           </h2>
           <Grid cols={3}>
@@ -29,6 +35,7 @@ export default function NotreUniversPage() {
           </Grid>
         </div>
       </section>
+      <CTA data={solutionsCta} variant="secondary" />
     </>
   );
 }

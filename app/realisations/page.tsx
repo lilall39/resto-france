@@ -23,7 +23,13 @@ function ProjectCard({ project }: { project: ProjectData }) {
   return <Card data={cardData} />;
 }
 
+const MAX_DISPLAY_PROJECTS = 6;
+
 export default function RealisationsPage() {
+  const projectsToShow = realisationsList
+    .filter((p) => p.image)
+    .slice(0, MAX_DISPLAY_PROJECTS);
+
   return (
     <>
       <Hero data={realisationsHero} compact />
@@ -33,7 +39,7 @@ export default function RealisationsPage() {
             Nos références
           </h2>
           <Grid cols={3}>
-            {realisationsList.map((project) => (
+            {projectsToShow.map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
           </Grid>
