@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design system : variables CSS pour surcharge facile */
+:root {
+  --color-primary: #A25A3C;
+  --color-secondary: #1F3D34;
+  --color-background: #F7F5F2;
+  --color-muted: #ECEAE6;
+  --color-text: #1F1F1F;
+}
+
+@layer base {
+  body {
+    @apply font-body text-text bg-background antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display text-text font-semibold;
+  }
+}
+
+/* Espacements sections : mobile-first puis desktop */
+@layer components {
+  .section-padding {
+    @apply py-10 md:py-16;
+  }
+}
